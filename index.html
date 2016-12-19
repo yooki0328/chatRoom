@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Websocket网页聊天室</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+	<div id="first" style="display: block;">
+		<form>
+			<p>请输入在聊天室中的昵称</p>
+			<input type="text" placeholder="请输入ID" id="NameId">
+			<button class="entry">提交</button>
+		</form>
+	</div>
+	<div id="second" style="display: none;">
+		<header>
+			<h1>
+			Websocket网页聊天室
+			<span><b id="title_top"></b>|<a href="#" id="exit">退出</a></span>
+			</h1>
+		</header>
+		<article>
+		<div class="chatboxWrap">
+			<div class="chatbox">
+				<p class="count"></p>
+			</div>
+		</div>
+			
+		</article>
+		<footer>
+			<form>
+				<input type="text" name="message" id="message" placeholder="请输入聊天内容，按enter提交">
+				<button class="submit">提交</button>
+				</form>
+		</footer>
+			
+	</div>
+	
+	<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+	<script src="server.js"></script>
+
+</body>
+</html>
